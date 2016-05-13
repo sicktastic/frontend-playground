@@ -10,8 +10,9 @@ var betterGreeting = (message, name) => message + name;
 
 var squared = x => x * x;
 
-var delieverBoy = {
-  name: "John",
+// Original
+var deliveryBoy = {
+  name: "Anthony",
 
   handleMessage: function (message, handler) {
     handler(message);
@@ -27,3 +28,18 @@ var delieverBoy = {
     })
   }
 }
+
+// Arrow Function
+var delivery = {
+  name: "Anthony",
+
+  handleMessage: function (message, handler) {
+    handler(message);
+  },
+
+  receive: function () {
+    this.handleMessage("Hello, ", messages => console.log(message + this.name))
+  }
+}
+
+deliverBoy.receive();

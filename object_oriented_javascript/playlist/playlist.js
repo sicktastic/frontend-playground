@@ -27,7 +27,9 @@ Playlist.prototype.next= function() {
 };
 
 Playlist.prototype.renderIn = function() {
-  
+  list.innerHTML = "";
+  for(var i=0; i < this.songs.length; i++) {
+    list.innnerHTML += this.songs[i].toHTML();
+  }
 }
-
 

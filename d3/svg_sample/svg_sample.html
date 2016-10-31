@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>D3 - SVG Position Practice</title>
+  <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+  <script type="text/javascript">
+  		function createSVG() {
+  			mySVG = d3.select('body').append('svg')
+  																	.attr('height', '800')
+  																	.attr('width', '500');
+  			mySVG.append('circle')
+  							.attr('id', 'start')
+  		 					.attr('class', 'foobar');
+  		 	mySVG.append('circle')
+  		 					.attr('id', 'end')
+  		 					.attr('class', 'foobar');
+  		 	mySVG.append('line')
+  		 					.attr('class', 'foobar')
+  		};
+  		
+  		function thickenCircles() {
+  			var circles = d3.selectAll('circle')
+  												.attr('r', '20');
+  		};
+
+  		function moveCircles() {
+  			d3.select('#start')
+  					.attr('cx', '100')
+  					.attr('cy', '100');
+  			d3.select("#end")
+  					.attr('cx', '200')
+  					.attr('cy', '200');
+  		};
+
+  		function styleLine() {
+  			d3.select('line')
+  					.attr('x1', 100)
+  					.attr('x2', 100)
+  					.attr('y1', 5)
+  					.attr('y2', 100)
+  					.style('stroke', 'cyan');
+  		};
+
+  		function moveLine() {
+  			d3.select('line')
+  					.attr('x1', '100')
+  					.attr('y1', '100')
+  					.attr('x2', '200')
+  					.attr('y2', '200');
+  		};
+
+  		function thickenLine() {
+  			d3.select('line')
+  					.style('stroke-width', '5');
+  		};
+
+  		function styleCircles() {
+  			d3.select('#start')
+  					.style('fill', 'lavender');
+  			d3.select('#end')
+  					.style('fill', 'none')
+  					.style('stroke', 'turquoise');
+  		};
+
+  		function runAll() {
+  			createSVG();
+  			thickenLine();
+  			moveCircles();
+  			styleLine();
+  			moveLine();
+  			thickenLine();
+  			styleCircles();
+  		}
+   </script>
+</head>
+<body>
+  <svg height="800" width="500">
+    <circle/>
+    <circle r="50"/>
+    <circle r="50" cx="200" cy="300"/>
+  </svg>
+</body>
+</html>

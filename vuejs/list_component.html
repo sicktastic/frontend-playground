@@ -1,0 +1,41 @@
+<div id="card">
+  <header>{{ title }}</header>
+  <div>
+    <input id="itemForm" v-on:keypress.enter="addItem" />
+    <button v-on:click="addItem">Add Dinosaur</button>
+  </div>
+  <ul>
+    <li v-for="(item, index) in items">
+      <button v-on:click="deleteItem(index)">X</button>
+      {{ item.text }}
+    </li>
+  </ul>
+</div>
+
+<script>
+  var card = new Vue({
+    el: "#card",
+    data: {
+      title: "Dinosaurs",
+      item: [
+      { text: "Velociraptor" },
+      { text: "Triceratops" }
+      ]
+    },
+    methods: {
+      AddItem: function(){
+        var input = document.getElementById("itemForm");
+
+        if(input.value !== '') {
+          this.items.push({
+            text: input.value
+          })
+          input.value = "";
+        }
+      },
+      deleteItem: function (index) {
+        this.item.splice(index, 1);
+      }
+    }
+  })
+</script>

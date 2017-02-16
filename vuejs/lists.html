@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Basic Interpolation</title>
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+  </head>
+  <body>
+
+    <div id="list">
+      <ul>
+        <li v-for="name in names" v-text="name"></li>
+      </ul>
+
+      <input id="input" type="text" />
+      <button id="button">Add Name</button>
+    </div>
+  </body>
+
+  <script>
+    var app = new Vue({
+      el: '#list',
+      data: {
+        names: ['Anthony', 'Chey', 'Raine', 'Bella Clementine']
+      }
+    });
+
+    document.querySelector('#button').addEventListener('click', () => {
+      let name = document.querySelector('#input').value;
+
+      app.names.push(name)
+    });
+  </script>
+</html>
+
+

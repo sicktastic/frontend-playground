@@ -9,7 +9,8 @@
   <body>
 
     <div id="app">
-      <p>{{ title }}</p>
+      <!-- <p>{{ title }}</p>-->
+      <p>{{ sayHello() }}</p>
     </div>
   </body>
 
@@ -18,6 +19,11 @@
       el: '#app',
       data: {
         title: 'Hello World!'
+      },
+      methods: {
+        sayHello: function() {
+          return 'Hello!';
+        }
       }
     });
   </script>

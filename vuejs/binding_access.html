@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Basic Interpolation</title>
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+  </head>
+  <body>
+
+    <div id="app">
+      <p>Where are you?</p>
+      <!-- <p>{{ title }}</p>-->
+      <p>{{ sayHello() }} - <a v-bind:href="link">Google</a></p>
+    </div>
+  </body>
+
+  <script>
+    new Vue({
+      el: '#app',
+      data: {
+        title: 'Hello World!',
+        link: 'http://google.com'
+      },
+      methods: {
+        sayHello: function() {
+          // return 'Hello!';
+          // this happens in behind the scene
+          return this.title
+        }
+      }
+    });
+  </script>
+</html>
+

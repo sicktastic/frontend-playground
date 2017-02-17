@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Computed Properties</title>
+  </head>
+  <body>
+
+    <div id="root">
+      <h1>
+        <!-- {{ message.split('').reverse().join('') }} -->
+        {{ reverseMessage }}
+      </h1>
+
+      <h2>All Tasks</h2>
+      <ul>
+        <li v-for="task in tasks" v-text="task.description"></li>
+      </ul>
+
+      <h2>Completed Tasks the Long Way</h2>
+      <ul>
+        <li v-for="task in tasks" v-if="task.completed" v-text="task.description"></li>
+      </ul>
+
+      <h3>Incomplete Tasks</h2>
+      <ul>
+        <li v-for="task in incompleteTasks" v-text="task.description"></li>
+      </ul>
+    </div>
+
+    <script src="https://unpkg.com/vue@2.1.3/dist/vue.js"></script>
+  </body>
+
+  <script>
+    var app = new Vue({
+      el: '#root',
+      data: {
+        message: 'Hello World',
+          tasks: [
+            { description: 'Task 1', completed: true },
+            { description: 'Task 2', completed: true },
+            { description: 'Task 3', completed: false },
+            { description: 'Task 4', completed: false },
+            { description: 'Task 5', completed: true },
+            { description: 'Task 6', completed: false }
+          ]
+      },
+      computed: {
+        reverseMessage() {
+          return this.message.split('').reverse().join('')
+        },
+        incompleteTasks() {
+          return this.tasks.filter(task => ! task.completed);
+        }
+      }
+    });
+  </script>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Attribute and Class Binding</title>
+    <style>
+      .color-red { color: red; }
+      .color-blue { color: blue; }
+      .is-loading { background red; }
+    </style>
+  </head>
+  <body>
+
+    <div id="root">
+      <!-- <h1 :class="className">Hello World</h1>-->
+      <!-- <button :title="title">Hover Over Me</button>-->
+      <button :class="{ 'is-loading': isLoading }" @click="toggleClass">Click Me</button>
+    </div>
+
+    <script src="https://unpkg.com/vue@2.1.3/dist/vue.js"></script>
+  </body>
+
+  <script>
+    var app = new Vue({
+      el: '#root',
+      data: {
+        title: 'Javascript title',
+        className: 'color-red',
+        isLoading: false
+      },
+      methods: {
+        toggleClass() {
+          this.isLoading = true;
+        }
+      }
+    });
+  </script>
+</html>

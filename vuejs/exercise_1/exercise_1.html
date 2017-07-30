@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>v-once</title>
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+  </head>
+  <body>
+    <div id="exercise">
+      <p>VueJS is pretty cool - {{ fullName}} ({{ age }})</p>
+      <p>{{ age * 3 }}</p>
+      <p>{{ randomNumber() }}</p>
+      <div>
+        <img style="width:100px;height:100px" v-bind:src="image">
+      </div>
+      <div>
+        <input type="text" v-bind:value="fullName">
+      </div>
+    </div>
+  </body>
+
+  <script>
+    new Vue({
+      el: '#exercise',
+      data: {
+        fullName: 'Anthony Lee',
+        age: 38,
+        image: 'https://media.giphy.com/media/DYH297XiCS2Ck/giphy-downsized.gif'
+      },
+      methods: {
+        randomNumber: function() {
+          return Math.random();
+        }
+      }
+    });
+  </script>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Listening to Events</title>
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+  </head>
+
+  <body>
+
+    <div class="container">
+      <div id="app">
+        <div class="card">
+          <div class="card-block">
+            <button class="btn btn-success" v-on:click="increaseCounter">Increase</button>
+            <br /><br />
+            <p>Counter: {{ counter }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  <script>
+    new Vue({
+      el: '#app',
+      data: {
+        counter: 0
+      },
+      methods: {
+        increaseCounter: function() {
+          this.counter++;
+        }
+      }
+    });
+  </script>
+  </body>
+</html>

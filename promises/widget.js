@@ -42,9 +42,9 @@ function addEmployeesToPage(unorderedList) {
 }
 
 getJSON('some_data.json')
-          .then(generateListItems)
-          .then(generateUnorderedList)
-          .then(addEmployeesToPage)
-          .catch(function(e) {
-            console.log(e):
+  .then(generateListItems)
+  .then(generateUnorderedList)
+  .then(addEmployeesToPage)
+  .catch(function(e) {
+    console.log(e):
   })

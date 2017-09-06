@@ -50,3 +50,4 @@ class App extends React.component {
 // const Heart = () => <span className="glyphicon glyphicon-heart"></span>
 
 // export default App
+

@@ -9,14 +9,14 @@
   </head>
 
   <body>
+
     <div class="container">
       <div id="app">
         <div class="card">
           <div class="card-block">
-            <button class="btn btn-success" v-on:click="increase">Increase</button>
+            <button class="btn btn-success" v-on:click="increaseCounter">Increase</button>
             <br /><br />
             <p>Counter: {{ counter }}</p>
-            <p v-on:mouseover='updateCoordinates'>Coordinates: {{ x }} / {{ y }}</p>
           </div>
         </div>
       </div>
@@ -26,17 +26,11 @@
     new Vue({
       el: '#app',
       data: {
-        counter: 0,
-        x: 0,
-        y: 0
+        counter: 0
       },
       methods: {
-        increase: function() {
+        increaseCounter: function() {
           this.counter++;
-        },
-        updateCoordinates: function(event) {
-          this.x = event.clientX;
-          this.y = event.clientY;
         }
       }
     });

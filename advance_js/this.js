@@ -70,18 +70,18 @@
 
 // Constructor
 
-var City = function(name, state) {
-  this.name = name || 'Portland';
-  this.state = state || 'Oregon';
-  this.printMyCityAndState = function() {
-    console.log("My city is " + this.name + ", and my state is " + this.state);
-  };
-};
+// var City = function(name, state) {
+//   this.name = name || 'Portland';
+//   this.state = state || 'Oregon';
+//   this.printMyCityAndState = function() {
+//     console.log("My city is " + this.name + ", and my state is " + this.state);
+//   };
+// };
 
-portland = new City();
-seattle = new City('Seattle', 'Washington');
+// portland = new City();
+// seattle = new City('Seattle', 'Washington');
 
-console.log(portland);
-console.log(seattle);
+// console.log(portland);
+// console.log(seattle);
 
-portland.printMyCityAndState();
+// portland.printMyCityAndState();

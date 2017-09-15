@@ -14,10 +14,6 @@
       <div id="app">
         <div class="card">
           <div class="card-block">
-            <button class="btn btn-success" v-on:click="increaseCounter">Increase</button>
-            <br /><br />
-            <p>Counter: {{ counter }}</p>
-            <br /><br />
             <input type="text" v-on:keyup.enter.space="alertMe" />
           </div>
         </div>
@@ -31,9 +27,6 @@
         counter: 0
       },
       methods: {
-        increaseCounter: function(step) {
-          this.counter += step;
-        },
         alertMe: function() {
           alert("Hello, there");
         }

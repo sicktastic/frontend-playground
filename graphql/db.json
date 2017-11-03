@@ -21,7 +21,8 @@
     {
       "firstName": "Anthony",
       "age": 26,
-      "id": "yOTVhLU"
+      "id": "yOTVhLU",
+      "companyId": "2"
     }
   ],
   "companies": [

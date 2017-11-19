@@ -1,0 +1,31 @@
+{
+  "name": "graphql-playground",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "json:server": "json-server --watch db.json",
+    "dev": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/antwonlee/graphql-playground.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/antwonlee/graphql-playground/issues"
+  },
+  "homepage": "https://github.com/antwonlee/graphql-playground#readme",
+  "dependencies": {
+    "axios": "^0.17.0",
+    "express": "^4.16.2",
+    "express-graphql": "^0.6.11",
+    "graphql": "^0.11.7",
+    "json-server": "^0.12.1",
+    "lodash": "^4.17.4",
+    "lodash.find": "^4.6.0",
+    "nodemon": "^1.12.1"
+  }
+}

@@ -28,8 +28,9 @@ class App extends Component {
           return {
             ...guest,
             isConfirmed: !guest.isConfirmed
-          }
+          };
         }
+        return guest;
       })
     });
 

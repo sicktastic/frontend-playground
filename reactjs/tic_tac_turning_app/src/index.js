@@ -1,9 +1,12 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
+import {Router, browserHistory} from 'react-router'
+import Routes from './routes'
 
 ReactDOM.render(
-  <div>
-    <h1>Tic Tac Turn</h1>
-  </div>,
+  <Router
+    history={browserHistory}
+    routees={Routes}
+  />,
   document.getElementById('root')
 );

@@ -10,9 +10,6 @@ const createRoutes = () => {
       path='/'
       component={Template}
     >
-    <IndexRoute
-      component={Home}
-    />
     <Route
       path={'/profile'}
       component={Profile}

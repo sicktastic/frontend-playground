@@ -1,10 +1,11 @@
 import React, {Component} from 'react'
 
 class Profile extends Component {
+
   render() {
-    return(
+    return (
       <div>
-        <h2>Profile</h2>
+        <h2>Profile!</h2>
       </div>
     )
   }

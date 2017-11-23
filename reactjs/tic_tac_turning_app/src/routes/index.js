@@ -10,14 +10,17 @@ const createRoutes = () => {
       path='/'
       component={Template}
     >
-    <Route
-      path={'/profile'}
-      component={Profile}
-    />
+      <IndexRoute
+        component={Home}
+      />
+      <Route
+        path={'/profile'}
+        component={Profile}
+      />
     </Route>
   )
 }
 
 const Routes = createRoutes()
 
-export default Routes 
+export default Routes

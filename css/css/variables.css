@@ -1,0 +1,62 @@
+/* VARIABLES --------------------------------------------------- */
+
+:root {
+  --color-primary: #278da4;
+  --color-secondary: #b13c69;
+
+  --color-bg: #3acec2;
+  --color-bg-light: #009fe1;
+
+  --gradient: var(--color-bg-light),
+              var(--color-bg);
+
+  --font-stack-primary: 'Raleway', sans-serif;
+  --font-stack-secondary: 'Bree Serif', serif;
+
+  --max-width: 1000px;
+  --gutter: 12px;
+}
+
+/* BASE STYLES ------------------------------------------------- */
+
+body {
+  font-family: var(--font-stack-primary);
+}
+
+h1,
+h2 {
+  font-family: var(--font-stack-secondary);
+}
+
+a,
+h2 {
+  color: var(--color-primary);
+}
+
+header {
+  background: linear-gradient(var(--gradient)), url('../img/bg.jpg') no-repeat;
+  background-blend-mode: multiply;
+  background-size: cover;
+}
+
+/* COMPONENT STYLES ----------------------------------------------- */
+
+.main-nav li {
+  margin: 0 var(--gutter);
+}
+
+.btn-callout {
+  background-color: var(--color-secondary);
+}
+
+.btn-info {
+  background-color: var(--color-primary);
+}
+
+/* MEDIA QUERIES -------------------------------------------------- */
+
+@media (min-width: 768px) {
+  .main-content {
+    max-width: var(--max-width);
+  }
+}

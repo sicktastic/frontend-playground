@@ -42,4 +42,4 @@ Temporary Items
 node_modules/
 mocah/node_modules/**
 
-*key.js
+/reactjs/server/config/key.js

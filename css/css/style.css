@@ -147,3 +147,20 @@ footer {
     width: 45%;
   }
 }
+
+.slide .photo-overlay,
+.slide img {
+  transition: transform .6s ease-out;
+}
+
+.slide:hover .photo-overlay {
+  transform: translateX(0);
+}
+
+.slide:hover img {
+  transform: translateX(100%)
+}
+
+.slide .photo-overlay {
+  transform: translateX(-100%)
+}

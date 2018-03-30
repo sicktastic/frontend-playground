@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <script src="https://unpkg.com/react@16/umd/react.production.min.js"></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.26.0/babel.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <title>React Playground</title>
+  </head>
+  <body>
+
+    <div class="container">
+      <h1>React</h1>
+      <div id="react-container"></div>
+    </div>
+
+    <script type="text/babel">
+
+      const Banner = () => (
+        <div id="fancy">
+          <h1 className="heading">Welcome to React</h1>
+          <p>Have fun!</p>
+        </div>
+      )
+
+      ReactDOM.render(
+        <Banner />,
+        document.getElementById('react-container')
+      )
+      
+    </script>
+  </body>
+</html>

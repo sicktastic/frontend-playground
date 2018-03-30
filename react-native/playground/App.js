@@ -1,11 +1,26 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View, TextInput } from 'react-native';
 
 export default class App extends React.Component {
+  state = {
+    placeName: ''
+  }
+
+  placeNameChangeHandler = val => {
+    this.setState({
+      placeName: val
+    });
+  }
+
   render() {
     return (
       <View style={styles.container}>
-        <Text>Thrive knows, Thrive cares.</Text>
+        <TextInput 
+          style={{width: 300}}
+          placeholder="An awesome place"
+          value={this.state.placeName}
+          onChangeText={this.placeNameChangeHandler}
+        />
       </View>
     );
   }
@@ -14,8 +29,9 @@ export default class App extends React.Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    padding: 20,
     backgroundColor: '#fff',
     alignItems: 'center',
-    justifyContent: 'center',
+    justifyContent: 'flex-start',
   },
 });

@@ -1,8 +1,10 @@
 import React from 'react';
 import { Text, AppRegistry } from 'react-native';
 
+import Header from './src/components/header'
+
 const App = () => (
-  <Text>Where are you? Is this loading automaticall? Control + D</Text>
+  <Header />
 );
 
 AppRegistry.registerComponent('albums', () => App);

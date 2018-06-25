@@ -46,3 +46,4 @@ reactjs/server/config/keys.js
 /reactjs/server/config/keys.js
 
 *.env
+*.swp

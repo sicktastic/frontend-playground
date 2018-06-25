@@ -36,3 +36,6 @@ const vegetableList = `
     <li>Potato</lo>
   </ul>
 `;
+
+let name = "Gary"
+`Hello, ${name}`

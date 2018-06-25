@@ -39,3 +39,32 @@ const vegetableList = `
 
 let name = "Gary"
 `Hello, ${name}`
+
+// Basic Arrow Syntax
+
+var sayName = function() {
+  const message = "My name is " + name;
+  console.log(message)
+}
+
+var sayName = () => {
+  const message = "My name is " + name;
+  console.log(message)
+}
+
+sayName()
+
+//
+const square = function square(x) {
+  return x * x;
+}
+
+const square = function(x) {
+  return x * x;
+}
+
+const square = (x) => {
+  return x * x
+}
+
+const square = x => x * x

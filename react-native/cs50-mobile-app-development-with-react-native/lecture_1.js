@@ -14,3 +14,61 @@
 // 01:43:48 - Browsers and the DOM
 //
 // https://goo.gl/wk9Ljm (Video Lecture)
+
+// function makeFunctionArray() {
+//   const arr = []
+
+//   for (var i = 0; i < 5; i++) {
+//     arr.push(function() { console.log(i) })
+//   }
+
+//   return arr
+// }
+
+// const functionArr = makeFunctionArray()
+
+// functionArr[0]()
+
+// function makeHelloFunction() {
+//   const message = 'Hello!'
+
+//   function sayHello() {
+//     console.log(message)
+//   }
+
+//   return sayHello
+// }
+
+// const sayHello = makeHelloFunction()
+
+// console.log('value of message:', typeof message)
+// console.log(sayHello.toString())
+
+// sayHello()
+
+// Immediately Invoked Function Expression
+
+// const sayHello = (function makeHelloFunction() {
+//   const message = 'Hello!'
+
+//   function sayHello() {
+//     console.log(message)
+//   }
+
+//   return sayHello
+// })()
+
+// console.log('value of message:', typeof message)
+// console.log(sayHello.toString())
+
+const counter =  function() {
+  let count = 0
+
+  return {
+
+  }
+}
+
+counter.get()
+counter.inc()
+counter.get()

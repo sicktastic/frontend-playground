@@ -124,21 +124,35 @@
 
 // console.log(map(x, addOne))
 
-function printOne() {
-  console.log('one')
-}
+// function printOne() {
+//   console.log('one')
+// }
 
-function printTwo() {
-  console.log('two')
-}
+// function printTwo() {
+//   console.log('two')
+// }
 
-function printThree() {
-  console.log('three')
-}
+// function printThree() {
+//   console.log('three')
+// }
 
-setTimeout(printOne, 1000)
-setTimeout(printTwo, 0)
-printThree()
+// setTimeout(printOne, 1000)
+// setTimeout(printTwo, 0)
+// printThree()
 
 // Execution Stack
 // functions invoked by other functions get added to the call stack
+
+function addOne(num) {
+  return num + 1
+}
+
+function getNum() {
+  return addOne(10)
+}
+
+function c() {
+  console.log(getNum() + getNum())
+}
+
+c()

@@ -76,21 +76,50 @@
 
 // using iife to solove closure bug
 
-function makeFunctionArray() {
-  const arr = []
+// function makeFunctionArray() {
+//   const arr = []
 
-  for (var i = 0; i < 5; i++) {
-    arr.push((function(x) {
-      return function() { console.log(x) }
-    })(i))
-  }
+//   for (var i = 0; i < 5; i++) {
+//     arr.push((function(x) {
+//       return function() { console.log(x) }
+//     })(i))
+//   }
 
-  return arr
-}
+//   return arr
+// }
 
-const functionArr = makeFunctionArray()
+// const functionArr = makeFunctionArray()
 
-functionArr[0]()
+// functionArr[0]()
 
 // first class functions
 
+// .map
+// const x = [0,1,2,3]
+
+// function addOne(number) { return number + 1 }
+
+// console.log(x.map(addOne));
+
+// higher order functions
+
+function map(arr, fn) {
+  const newArr = []
+
+  // for (let i = 0; i < arr.length; i++) {
+  //   let val = arr[i]
+  //   newArr.push(fn(val))
+  // }
+
+  arr.forEach(function(val) {
+    newArr.push(fn(val))
+  })
+
+  return newArr
+}
+
+function addOne(num) { return num + 1 }
+
+const x = [0, 1, 2, 3]
+
+console.log(map(x, addOne))

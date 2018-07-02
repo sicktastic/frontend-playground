@@ -165,3 +165,28 @@
 // doSomething(console.log)
 
 // Promise
+
+const url = ''
+
+fetch(url)
+  .then(function(res) {
+    return res.json()
+  }) 
+  .then(function(json) {
+    return ({
+      importantDate: json.importantDate
+    })
+  }) 
+  .then(function(data) {
+    console.log(data)
+  }) 
+  .catch(function(err) {
+    // handle error
+  })
+
+// Async/Await
+
+async function login(req, res, callback) {
+  const user = await User.findOne({ email: req.body.email })
+  const isMatch = await user.compcarePassword(req.body.passord)
+}

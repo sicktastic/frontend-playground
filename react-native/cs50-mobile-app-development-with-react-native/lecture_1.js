@@ -143,16 +143,25 @@
 // Execution Stack
 // functions invoked by other functions get added to the call stack
 
-function addOne(num) {
-  return num + 1
-}
+// function addOne(num) {
+//   return num + 1
+// }
 
-function getNum() {
-  return addOne(10)
-}
+// function getNum() {
+//   return addOne(10)
+// }
 
-function c() {
-  console.log(getNum() + getNum())
-}
+// function c() {
+//   console.log(getNum() + getNum())
+// }
 
-c()
+// c()
+//
+// Callbacks
+// function doSomething(callback) {
+//   setTimeout(function() { callback(1)  }, 1000)
+// }
+
+// doSomething(console.log)
+
+// Promise

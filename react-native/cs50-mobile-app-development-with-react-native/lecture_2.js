@@ -22,3 +22,26 @@
 // 01:26:10 - toggleTodo
 // 01:36:35 - React Native Teaser
 // https://goo.gl/BUCqYr
+
+// Class
+class Set {
+  constructor(arr) {
+    this.arr = arr
+  }
+
+  add(val) {
+    if (!this.has(val)) this.arr.push(val)
+  }
+
+  delete(val) {
+    this.arr = this.arr.filter(x => x !== val)
+  }
+
+  has(val) {
+    return this.array.includes(val)
+  }
+
+  get size() {
+    return this.arry.length
+  }
+}

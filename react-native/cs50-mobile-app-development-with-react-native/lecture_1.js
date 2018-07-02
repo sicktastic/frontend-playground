@@ -61,14 +61,36 @@
 // console.log('value of message:', typeof message)
 // console.log(sayHello.toString())
 
-const counter =  function() {
-  let count = 0
+// const counter =  (function() {
+//   let count = 0
 
-  return {
+//   return {
+//     inc: function() { count = count + 1 },
+//     get: function() { console.log(count) }
+//   }
+// })()
 
+// counter.get()
+// counter.inc()
+// counter.get()
+
+// using iife to solove closure bug
+
+function makeFunctionArray() {
+  const arr = []
+
+  for (var i = 0; i < 5; i++) {
+    arr.push((function(x) {
+      return function() { console.log(x) }
+    })(i))
   }
+
+  return arr
 }
 
-counter.get()
-counter.inc()
-counter.get()
+const functionArr = makeFunctionArray()
+
+functionArr[0]()
+
+// first class functions
+

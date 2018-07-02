@@ -103,23 +103,42 @@
 
 // higher order functions
 
-function map(arr, fn) {
-  const newArr = []
+// function map(arr, fn) {
+//   const newArr = []
 
-  // for (let i = 0; i < arr.length; i++) {
-  //   let val = arr[i]
-  //   newArr.push(fn(val))
-  // }
+//   // for (let i = 0; i < arr.length; i++) {
+//   //   let val = arr[i]
+//   //   newArr.push(fn(val))
+//   // }
 
-  arr.forEach(function(val) {
-    newArr.push(fn(val))
-  })
+//   arr.forEach(function(val) {
+//     newArr.push(fn(val))
+//   })
 
-  return newArr
+//   return newArr
+// }
+
+// function addOne(num) { return num + 1 }
+
+// const x = [0, 1, 2, 3]
+
+// console.log(map(x, addOne))
+
+function printOne() {
+  console.log('one')
 }
 
-function addOne(num) { return num + 1 }
+function printTwo() {
+  console.log('two')
+}
 
-const x = [0, 1, 2, 3]
+function printThree() {
+  console.log('three')
+}
 
-console.log(map(x, addOne))
+setTimeout(printOne, 1000)
+setTimeout(printTwo, 0)
+printThree()
+
+// Execution Stack
+// functions invoked by other functions get added to the call stack

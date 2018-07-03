@@ -24,24 +24,43 @@
 // https://goo.gl/BUCqYr
 
 // Class
-class Set {
+// class Set {
+//   constructor(arr) {
+//     this.arr = arr
+//   }
+
+//   add(val) {
+//     if (!this.has(val)) this.arr.push(val)
+//   }
+
+//   delete(val) {
+//     this.arr = this.arr.filter(x => x !== val)
+//   }
+
+//   has(val) {
+//     return this.array.includes(val)
+//   }
+
+//   get size() {
+//     return this.arry.length
+//   }
+// }
+class MySet extends Set {
   constructor(arr) {
-    this.arr = arr
+    super(arr)
+    this.originalArray = arr
   }
 
   add(val) {
-    if (!this.has(val)) this.arr.push(val)
+    super.add(val)
+    console.log(`added ${val} to the set!`)
   }
 
-  delete(val) {
-    this.arr = this.arr.filter(x => x !== val)
+  toArray() {
+    return Array.from(this)
   }
 
-  has(val) {
-    return this.array.includes(val)
-  }
-
-  get size() {
-    return this.arry.length
+  reset() {
+    return new MySet(this.originalArray)
   }
 }

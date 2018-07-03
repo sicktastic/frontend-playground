@@ -67,3 +67,13 @@ class MySet extends Set {
 }
 
 // imperative vs declarative
+
+const strings = ['E', 'A', 'D', 'G', 'B', 'E']
+
+function Guitar() {
+  return (
+    <Guitar>
+      <String note={string[0]} />
+    </Guitar>
+  )
+}

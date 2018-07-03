@@ -45,6 +45,7 @@
 //     return this.arry.length
 //   }
 // }
+
 class MySet extends Set {
   constructor(arr) {
     super(arr)
@@ -64,3 +65,5 @@ class MySet extends Set {
     return new MySet(this.originalArray)
   }
 }
+
+// imperative vs declarative
